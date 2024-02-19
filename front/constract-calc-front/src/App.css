@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.loginForm {
+  max-width: 300px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginForm h2 {
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+.loginForm__input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 10px;
+}
