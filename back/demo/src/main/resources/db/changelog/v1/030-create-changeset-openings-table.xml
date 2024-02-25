@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="create-openings-table" author="barakovskaya_elena">
+        <createTable tableName="openings" remarks="Проемы">
+            <column name="id" type="int" autoIncrement="true" remarks="ID Проемы">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="type" type="varchar" remarks="Тип">
+                <constraints nullable="false"/>
+            </column>
+            <column name="width" type="float" remarks="Ширина">
+                <constraints nullable="false"/>
+            </column>
+            <column name="height" type="float" remarks="Высота">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="create-calculation-table" author="barakovskaya_elena">
+        <createTable tableName="calculation">
+            <column name="id" type="int" autoIncrement="true" remarks="ID расчета">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="customer_id" type="int" remarks="Заказчик">
+                <constraints nullable="false"
+                             foreignKeyName="calculation-customer-id-customers-id"
+                             references="customers(id)"/>
+            </column>
+            <column name="address_object_constractions" type="varchar" remarks="Адрес объекта строительства">
+                <constraints nullable="false"/>
+            </column>
+            <column name="number" type="int" autoIncrement="true" remarks="Номер">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="datetime" remarks="Дата создания" value="current_date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="results_id" type="int" remarks="ID Результаты">
+                <constraints nullable="false"
+                             foreignKeyName="calculation-results-id-results_id"
+                             references="results(id)"/>
+            </column>
+            <column name="calculation_state_id" type="int" remarks="Статус">
+                <constraints nullable="false"
+                             foreignKeyName="calculation-state-id-state_id"
+                             references="calculation_state(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
