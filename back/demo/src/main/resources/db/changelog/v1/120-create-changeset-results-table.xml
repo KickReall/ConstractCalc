@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+<changeSet id="create-results-table" author="barakovskaya_elena">
+    <createTable tableName="results" remarks="Результаты расчетов">
+        <column name="id" type="int" autoIncrement="true" remarks="ID результата">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="material_characteristics_id" type="int" remarks="ID Характеристика материала">
+            <constraints unique="true" nullable="false"
+                         foreignKeyName="results-material-characteristics-id-material-characteristics-id"
+                         references="material_characteristics(id)"/>
+        </column>
+        <column name="material" type="varchar" remarks="Материал"/>
+        <column name="amount" type="int" remarks="Количество"/>
+        <column name="price" type="float" remarks="Стоимость"/>
+        <column name="measurement_unit" type="varchar" remarks="Единицы измерения"/>
+        <column name="full_price" type="float" remarks="Полная стоимость"/>
+    </createTable>
+</changeSet>
+</databaseChangeLog>

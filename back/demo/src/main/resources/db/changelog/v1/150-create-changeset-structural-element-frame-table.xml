@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+<changeSet id="create-structural-element-frame-table" author="barakovskaya_elena">
+    <createTable tableName="structural_element_frame" remarks="Конструктивный элемент каркас">
+        <column name="id" type="int" autoIncrement="true" remarks="ID Конструктивного элемента каркас">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="results_id" type="int" remarks="ID Результаты">
+            <constraints nullable="false"
+                         foreignKeyName="structural-element-frame-results-id-results_id"
+                         references="results(id)"/>
+        </column>
+        <column name="amount_floor" type="int" remarks="Количество этажей">
+            <constraints nullable="false"/>
+        </column>
+        <column name="floor_number" type="int" remarks="Номер этажа">
+            <constraints nullable="false"/>
+        </column>
+        <column name="floor_height" type="int" remarks="Высота этажа">
+            <constraints nullable="false"/>
+        </column>
+        <column name="perimeter_of_external_walls" type="float" remarks="Периметр внешних стен">
+            <constraints nullable="false"/>
+        </column>
+        <column name="base_area" type="float" remarks="Площадь основания">
+            <constraints nullable="false"/>
+        </column>
+        <column name="external_wall_thickness" type="float" remarks="Толщина внешних стен">
+            <constraints nullable="false"/>
+        </column>
+        <column name="internal_wall_length" type="float" remarks="Длина внутренних стен">
+            <constraints nullable="false"/>
+        </column>
+        <column name="internal_wall_thickness" type="float" remarks="Толщина внутренних стен">
+            <constraints nullable="false"/>
+        </column>
+        <column name="OSB_external_wall" type="char" remarks="ОСБ обшивки внешних стен">
+            <constraints nullable="false"/>
+        </column>
+        <column name="steam_waterproofing_external_wall" type="char"
+                remarks="Парогидроизоляция обшивки внешних стен">
+            <constraints nullable="false"/>
+        </column>
+        <column name="windscreen_external_wall" type="char" remarks="Ветрозащита обшивки внешних стен">
+            <constraints nullable="false"/>
+        </column>
+        <column name="insulation_external_wall" type="char" remarks="Утеплитель внешних стен">
+            <constraints nullable="false"/>
+        </column>
+        <column name="overlap_thickness" type="char" remarks="Толщина перекрытия">
+            <constraints nullable="false"/>
+        </column>
+        <column name="OSB_thickness" type="char" remarks="ОСБ на перекрытия">
+            <constraints nullable="false"/>
+        </column>
+        <column name="steam_waterproofing_thickness" type="char" remarks="Парогидроизоляция на перекрытия">
+            <constraints nullable="false"/>
+        </column>
+        <column name="windscreen_thickness" type="char" remarks="Ветрозащита на перекрытия">
+            <constraints nullable="false"/>
+        </column>
+        <column name="insulation_thickness" type="char" remarks="Утеплитель на перекрытия">
+            <constraints nullable="false"/>
+        </column>
+        <column name="OSB_internal_wall" type="char" remarks="ОСБ для обшивки внутренних стен">
+            <constraints nullable="false"/>
+        </column>
+    </createTable>
+</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="create-frame-openings-table" author="barakovskaya_elena">
+        <createTable tableName="frame_openings" remarks="Проемы в конструктивном элементе каркас">
+            <column name="id" type="int" autoIncrement="true" remarks="ID Проемы в конструктивном элементе каркас">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="structural_element_frame_id" type="int" remarks="ID структурного элемента каркаса">
+                <constraints nullable="false"
+                             foreignKeyName="frame-openings-structural-element-frame-id-structural-element-frame-id"
+                             references="structural_element_frame(id)"/>
+            </column>
+            <column name="openings_id" type="int" remarks="ID проемы">
+                <constraints nullable="false"
+                             foreignKeyName="frame-openings-openings-id-openings-id"
+                             references="openings(id)"/>
+            </column>
+            <column name="amount" type="int" remarks="Количество"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="create-users-users-group-table" author="barakovskaya_elena">
+        <createTable tableName="users_usersGroup" remarks="Таблица связей пользователей и связанных групп">
+            <column name="id" type="int" autoIncrement="true" remarks="ID связи">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="int" remarks="ID пользователя">
+                <constraints nullable="false"
+                             foreignKeyName="users-users-group-user-id"
+                             references="users(id)"/>
+            </column>
+            <column name="usersgroup_id" type="int" remarks="ID пользовательской группы">
+                <constraints nullable="false"
+                             foreignKeyName="users-users-group-usersgroup-id"
+                             references="users_group(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
