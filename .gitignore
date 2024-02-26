@@ -1,0 +1,14 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+
+/back/demo/target
+!/back/demo/.mvn/wrapper/maven-wrapper.jar
+!/back/demo/**/src/main/**/target/
+!/back/demo/**/src/test/**/target/

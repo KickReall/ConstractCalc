@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+<changeSet id="create-structural-element-basement-table" author="barakovskaya_elena">
+    <createTable tableName="structural_element_basement" remarks="Конструктивный элемент фундамент">
+        <column name="id" type="int" autoIncrement="true" remarks="ID Конструктивного элемента фундамент">
+            <constraints primaryKey="true" nullable="false"/>
+        </column>
+        <column name="results_id" type="int" remarks="ID Результаты">
+            <constraints nullable="false" foreignKeyName="structural-element-basement-results-id-results-id"
+                         references="results(id)"/>
+        </column>
+        <column name="internal_wall_length" type="float" remarks="Длина внутренних стен">
+            <constraints nullable="false"/>
+        </column>
+        <column name="concrete_piles" type="varchar" remarks="Бетонные сваи">
+            <constraints nullable="false"/>
+        </column>
+        <column name="concrete" type="varchar" remarks="Бетон">
+            <constraints nullable="false"/>
+        </column>
+    </createTable>
+</changeSet>
+</databaseChangeLog>
