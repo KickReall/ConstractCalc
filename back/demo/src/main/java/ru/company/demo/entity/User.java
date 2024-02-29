@@ -1,9 +1,6 @@
 package ru.company.demo.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,16 +12,12 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
-public class User extends AbstractEntity{
-    private String lastName;
-    private String firstName;
-    private String secondName;
-    private Integer phone;
-    private String mail;
+public class User extends AbstractUser{
+
     private String password;
     private String login;
 
-    @OneToMany
+    @ManyToOne
     @Column(name="state_id")
     private UserState state;
 
