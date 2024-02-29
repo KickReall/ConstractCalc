@@ -18,7 +18,7 @@ public class User extends AbstractUser{
     private String login;
 
     @ManyToOne
-    @Column(name="state_id")
+    @JoinColumn (name="state_id")
     private UserState state;
 
 }
