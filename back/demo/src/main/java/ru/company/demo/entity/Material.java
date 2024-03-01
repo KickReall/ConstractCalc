@@ -1,6 +1,7 @@
 package ru.company.demo.entity;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -16,8 +17,11 @@ import lombok.Setter;
 @Table(name = "materials")
 public class Material extends AbstractEntity{
 
+    @Column(name="name")
     private String name;
-    private String material_type;
-    private String structural_element_type;
+    @Column(name="material_type")
+    private String materialType;
+    @Column(name="structural_element_type")
+    private String structuralElementType;
 
 }

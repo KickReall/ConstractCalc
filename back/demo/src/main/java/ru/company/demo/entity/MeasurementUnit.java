@@ -1,6 +1,7 @@
 package ru.company.demo.entity;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -17,7 +18,8 @@ import lombok.Setter;
 @Table(name = "measurement_units")
 public class MeasurementUnit extends AbstractEntity {
 
+    @Column(name="measurement_units_name")
     @NotBlank
-    private String measurement_units_name;
+    private String measurementUnitsName;
 
 }

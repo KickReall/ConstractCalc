@@ -1,5 +1,6 @@
 package ru.company.demo.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -16,6 +17,7 @@ import lombok.Setter;
 @Table(name = "customers")
 public class Customer extends AbstractUser {
 
+    @Column(name="address")
     @NotBlank
     private String address;
 

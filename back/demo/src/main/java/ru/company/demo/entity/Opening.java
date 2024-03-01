@@ -1,6 +1,7 @@
 package ru.company.demo.entity;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -18,10 +19,13 @@ import lombok.Setter;
 @Table(name = "openings")
 public class Opening extends AbstractEntity{
 
+    @Column(name="type")
     @NotBlank
     private String type;
+    @Column(name="width")
     @NotBlank
     private float width;
+    @Column(name="height")
     @NotBlank
     private float height;
 

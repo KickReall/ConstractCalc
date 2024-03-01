@@ -14,11 +14,13 @@ import lombok.Setter;
 @Table(name = "users")
 public class User extends AbstractUser{
 
+    @Column(name="password")
     private String password;
+    @Column(name="login")
     private String login;
 
     @ManyToOne
     @JoinColumn (name="state_id")
-    private UserState state;
+    private UserState stateId;
 
 }

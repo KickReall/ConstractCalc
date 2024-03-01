@@ -1,6 +1,7 @@
 package ru.company.demo.entity;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -17,6 +18,7 @@ import lombok.Setter;
 @Table(name = "calculation_state")
 public class CalculationState extends AbstractEntity{
 
+    @Column(name="name")
     @NotBlank
     private String name;
 
