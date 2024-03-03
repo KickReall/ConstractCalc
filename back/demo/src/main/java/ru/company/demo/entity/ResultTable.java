@@ -24,15 +24,15 @@ public class ResultTable{
     @Column(name="material")
     private String material;
     @Column(name="amount")
-    private int amount;
+    private Integer amount;
     @Column(name="price")
-    private float price;
+    private Float price;
 
     @ManyToOne
     @JoinColumn(name="measurement_unit")
     private MeasurementUnit measurementUnitId;
 
     @Column(name="fullPrice")
-    private float fullPrice;
+    private Float fullPrice;
 
 }

@@ -27,8 +27,8 @@ public class PriceList{
     private Date date;
 
     @Column(name="purhcase_price")
-    private float purchasePrice;
+    private Float purchasePrice;
 
     @Column(name="selling_price")
-    private float sellingPrice;
+    private Float sellingPrice;
 }

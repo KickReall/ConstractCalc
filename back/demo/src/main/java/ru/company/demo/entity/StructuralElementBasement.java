@@ -22,7 +22,7 @@ public class StructuralElementBasement
     private ResultTable resultId;
 
     @Column(name="internal_wall_length")
-    private float internalWallLength;
+    private Float internalWallLength;
 
     @Column(name = "concrete_piles")
     private String concretePiles;
