@@ -37,6 +37,10 @@
   }
 }
 
+.logo-login{
+  color: #1A2F63;
+}
+
 .loginForm {
   max-width: 300px;
   margin: 0 auto;
