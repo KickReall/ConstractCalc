@@ -8,7 +8,7 @@ import {
     MDBModalHeader, MDBModalTitle,
 } from "mdb-react-ui-kit";
 
-const CreateClientForm = () => {
+const CreateClientForm = ({style}) => {
     const [basicModal, setBasicModal] = React.useState(false);
     const [lastname, setLastname] = React.useState('');
     const [firstname, setFirstname] = React.useState('');
@@ -20,7 +20,7 @@ const CreateClientForm = () => {
     const toggleOpen = () => setBasicModal(!basicModal);
     return (
         <>
-            <MDBBtn onClick={toggleOpen}>Создать клиента</MDBBtn>
+            <MDBBtn onClick={toggleOpen} className={style}>Создать клиента</MDBBtn>
             <MDBModal open={basicModal} setOpen={setBasicModal} tabIndex='-1'>
                 <MDBModalDialog>
                     <MDBModalContent>

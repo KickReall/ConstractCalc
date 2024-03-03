@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "../components/Header";
+import CreateClientForm from "../components/forms/CreateClientForm";
 import ClientButton from "../components/ClientButton";
 import './Home.css';
 
@@ -9,9 +10,10 @@ const Home = () => {
   return (
     <div className='page'>
       <Header />
+      
       <h1 className='client'>Клиенты</h1>
       <div>
-        
+      <CreateClientForm style='create-button' />
       </div>
       <div className="home-container">
         
