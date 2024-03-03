@@ -36,35 +36,35 @@
         <column name="internal_wall_thickness" type="float" remarks="Толщина внутренних стен">
             <constraints nullable="false"/>
         </column>
-        <column name="OSB_external_wall" type="char" remarks="ОСБ обшивки внешних стен">
+        <column name="OSB_external_wall" type="varchar" remarks="ОСБ обшивки внешних стен">
             <constraints nullable="false"/>
         </column>
-        <column name="steam_waterproofing_external_wall" type="char"
+        <column name="steam_waterproofing_external_wall" type="varchar"
                 remarks="Парогидроизоляция обшивки внешних стен">
             <constraints nullable="false"/>
         </column>
-        <column name="windscreen_external_wall" type="char" remarks="Ветрозащита обшивки внешних стен">
+        <column name="windscreen_external_wall" type="varchar" remarks="Ветрозащита обшивки внешних стен">
             <constraints nullable="false"/>
         </column>
-        <column name="insulation_external_wall" type="char" remarks="Утеплитель внешних стен">
+        <column name="insulation_external_wall" type="varchar" remarks="Утеплитель внешних стен">
             <constraints nullable="false"/>
         </column>
-        <column name="overlap_thickness" type="char" remarks="Толщина перекрытия">
+        <column name="overlap_thickness" type="varchar" remarks="Толщина перекрытия">
             <constraints nullable="false"/>
         </column>
-        <column name="OSB_thickness" type="char" remarks="ОСБ на перекрытия">
+        <column name="OSB_thickness" type="varchar" remarks="ОСБ на перекрытия">
             <constraints nullable="false"/>
         </column>
-        <column name="steam_waterproofing_thickness" type="char" remarks="Парогидроизоляция на перекрытия">
+        <column name="steam_waterproofing_thickness" type="varchar" remarks="Парогидроизоляция на перекрытия">
             <constraints nullable="false"/>
         </column>
-        <column name="windscreen_thickness" type="char" remarks="Ветрозащита на перекрытия">
+        <column name="windscreen_thickness" type="varchar" remarks="Ветрозащита на перекрытия">
             <constraints nullable="false"/>
         </column>
-        <column name="insulation_thickness" type="char" remarks="Утеплитель на перекрытия">
+        <column name="insulation_thickness" type="varchar" remarks="Утеплитель на перекрытия">
             <constraints nullable="false"/>
         </column>
-        <column name="OSB_internal_wall" type="char" remarks="ОСБ для обшивки внутренних стен">
+        <column name="OSB_internal_wall" type="varchar" remarks="ОСБ для обшивки внутренних стен">
             <constraints nullable="false"/>
         </column>
     </createTable>
