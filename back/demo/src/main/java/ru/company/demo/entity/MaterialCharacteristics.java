@@ -32,11 +32,11 @@ public class MaterialCharacteristics{
     private Material materialId;
 
     @Column(name="length")
-    private Float length;
+    private float length;
     @Column(name="width")
-    private Float width;
+    private float width;
     @Column(name="thickness")
-    private Float thickness;
+    private float thickness;
     @Column(name="volume")
-    private Float volume;
+    private float volume;
 }

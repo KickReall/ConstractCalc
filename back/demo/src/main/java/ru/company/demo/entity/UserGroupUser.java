@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "users_usersGroup")
 public class UserGroupUser{
+
     @Id
     @GeneratedValue
     private int id;

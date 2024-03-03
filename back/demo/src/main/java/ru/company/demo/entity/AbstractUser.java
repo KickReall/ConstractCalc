@@ -11,6 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AbstractUser {
+
     @Column(name="last_Name")
     private String lastName;
     @Column(name="first_Name")
