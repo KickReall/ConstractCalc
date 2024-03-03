@@ -11,21 +11,19 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "users")
-public class User extends AbstractUser{
-
+public class FrameOpenings {
     @Id
     @GeneratedValue
     private int id;
 
-    @Column(name="password")
-    private String password;
-
-    @Column(name="login")
-    private String login;
+    @ManyToOne
+    @JoinColumn(name="structural_element_frame_id")
+    private StructuralElementFrame structuralElementFrameId;
 
     @ManyToOne
-    @JoinColumn (name="state_id")
-    private UserState stateId;
+    @JoinColumn(name="openings_id")
+    private Opening openingId;
 
+    @Column(name="amount")
+    private int amount;
 }

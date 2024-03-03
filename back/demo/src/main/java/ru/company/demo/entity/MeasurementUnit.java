@@ -1,9 +1,7 @@
 package ru.company.demo.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +14,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "measurement_units")
-public class MeasurementUnit extends AbstractEntity {
+public class MeasurementUnit{
+    @Id
+    @GeneratedValue
+    private int id;
 
     @Column(name="measurement_units_name")
     @NotBlank

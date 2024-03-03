@@ -15,7 +15,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "material_characteristics")
-public class MaterialCharacteristics extends AbstractEntity{
+public class MaterialCharacteristics{
+    @Id
+    @GeneratedValue
+    private int id;
 
     @Column(name="name")
     private String name;

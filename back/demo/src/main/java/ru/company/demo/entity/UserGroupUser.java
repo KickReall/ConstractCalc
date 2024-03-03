@@ -1,14 +1,14 @@
 package ru.company.demo.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users_usersGroup")
-public class UserGroupUser extends AbstractEntity {
+public class UserGroupUser{
+    @Id
+    @GeneratedValue
+    private int id;
 
     @ManyToOne
     @JoinColumn(name="user_id")

@@ -14,7 +14,10 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "price_lists")
-public class PriceList extends AbstractEntity{
+public class PriceList{
+    @Id
+    @GeneratedValue
+    private int id;
 
     @ManyToOne
     @JoinColumn(name="material_characteristics_id")

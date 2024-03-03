@@ -12,7 +12,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "results")
-public class ResultTable extends AbstractEntity{
+public class ResultTable{
+    @Id
+    @GeneratedValue
+    private int id;
 
     @ManyToOne
     @JoinColumn(name="material_characteristics_id")

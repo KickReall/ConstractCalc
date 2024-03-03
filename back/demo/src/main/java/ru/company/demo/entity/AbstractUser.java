@@ -10,7 +10,7 @@ import lombok.Setter;
 @MappedSuperclass
 @Getter
 @Setter
-public class AbstractUser extends AbstractEntity {
+public class AbstractUser {
     @Column(name="last_Name")
     private String lastName;
     @Column(name="first_Name")
