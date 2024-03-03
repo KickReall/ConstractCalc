@@ -7,7 +7,6 @@ const LoginPage = () => {
     const [login, setLogin] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [isValid, setIsValid] = React.useState();
-    const [touched, setTouched] = React.useState(false);
 
     React.useEffect(() => {
         const boolPassword = validatePassword();
