@@ -47,33 +47,33 @@ public class StructuralElementFrame {
     private float internalWallThickness;
 
     @Column(name="OSB_external_wall")
-    private char OSBExternalWall;
+    private String OSBExternalWall;
 
     @Column(name="steam_waterproofing_external_wall")
-    private char steamWaterproofingExternalWall;
+    private String steamWaterproofingExternalWall;
 
     @Column(name="windscreen_external_wall")
-    private char windscreenExternalWall;
+    private String windscreenExternalWall;
 
     @Column(name="insulation_external_wall")
-    private char insulationExternalWall;
+    private String insulationExternalWall;
 
     @Column(name="overlap_thickness")
-    private char overlapThickness;
+    private String overlapThickness;
 
     @Column(name="OSB_thickness")
-    private char OSBThickness;
+    private String OSBThickness;
 
     @Column(name="steam_waterproofing_thickness")
-    private char steamWaterproofingThickness;
+    private String steamWaterproofingThickness;
 
     @Column(name="windscreen_thickness")
-    private char windscreenThickness;
+    private String windscreenThickness;
 
     @Column(name="insulation_thickness")
-    private char insulationThickness;
+    private String insulationThickness;
 
     @Column(name="OSB_internal_wall")
-    private char OSBInternalWall;
+    private String OSBInternalWall;
 
 }
