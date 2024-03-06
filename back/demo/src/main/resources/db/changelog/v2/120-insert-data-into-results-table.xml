@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="insert-data-into-results-table" author="barakovskaya_elena">
+        <insert tableName="results">
+            <column name="material_characteristics_id" value="1"/>
+            <column name="material" value="Доска"/>
+            <column name="amount" value="5"/>
+            <column name="price" value="150.0"/>
+            <column name="measurement_unit" value="m3"/>
+            <column name="full_price" value="750.0"/>
+        </insert>
+
+        <insert tableName="results">
+            <column name="material_characteristics_id" value="2"/>
+            <column name="material" value="Фасад"/>
+            <column name="amount" value="5"/>
+            <column name="price" value="150.0"/>
+            <column name="measurement_unit" value="m3"/>
+            <column name="full_price" value="750.0"/>
+        </insert>
+
+        <insert tableName="results">
+            <column name="material_characteristics_id" value="3"/>
+            <column name="material" value="OSB"/>
+            <column name="amount" value="5"/>
+            <column name="price" value="150.0"/>
+            <column name="measurement_unit" value="m3"/>
+            <column name="full_price" value="750.0"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

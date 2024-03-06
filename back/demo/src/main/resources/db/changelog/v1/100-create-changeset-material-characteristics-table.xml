@@ -11,12 +11,12 @@
                 <constraints nullable="false"/>
             </column>
             <column name="measurement_unit_id" type="int" remarks="ID Единицы измерения">
-                <constraints unique="true" nullable="false"
+                <constraints nullable="false"
                              foreignKeyName="material-characteristics-measurement-unit-id-measurement-units-id"
                              references="measurement_units(id)"/>
             </column>
             <column name="materials_id" type="int" remarks="ID Материала">
-                <constraints unique="true" nullable="false"
+                <constraints nullable="false"
                              foreignKeyName="material-characteristics-materials-id-materials-id"
                              references="materials(id)"/>
             </column>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <property name="now" value="now()" dbms="postgresql"/>
+    <changeSet id="insert-data-into-price-lists-table" author="barakovskaya_elena">
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="1"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="115.5"/>
+            <column name="selling_price" value="150.0"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="2"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="45.4"/>
+            <column name="selling_price" value="70.0"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="3"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="345.5"/>
+            <column name="selling_price" value="500.0"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="4"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="33.2"/>
+            <column name="selling_price" value="50.6"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="5"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="45.4"/>
+            <column name="selling_price" value="70.0"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

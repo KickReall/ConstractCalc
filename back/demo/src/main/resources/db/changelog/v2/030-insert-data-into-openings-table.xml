@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="insert-data-into-openings-table" author="barakovskaya_elena">
+        <insert tableName="openings">
+            <column name="type" value="Оконные проемы"/>
+            <column name="width" value="0.5"/>
+            <column name="height" value="1"/>
+        </insert>
+
+        <insert tableName="openings">
+            <column name="type" value="Дверные проемы внешние"/>
+            <column name="width" value="0.9"/>
+            <column name="height" value="2.1"/>
+        </insert>
+
+        <insert tableName="openings">
+            <column name="type" value="Дверные проемы внутренние"/>
+            <column name="width" value="0.9"/>
+            <column name="height" value="2.1"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
