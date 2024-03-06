@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <property name="now" value="now()" dbms="postgresql"/>
+    <changeSet id="insert-data-into-calculation-table" author="barakovskaya_elena">
+        <insert tableName="calculation">
+            <column name="customer_id" value="1"/>
+            <column name="address_object_constractions" value="Какой-то адрес"/>
+            <column name="created_date" value="${now}"/>
+            <column name="results_id" value="1"/>
+            <column name="calculation_state_id" value="1"/>
+        </insert>
+
+        <insert tableName="calculation">
+            <column name="customer_id" value="1"/>
+            <column name="address_object_constractions" value="Какой-то адрес"/>
+            <column name="created_date" value="${now}"/>
+            <column name="results_id" value="2"/>
+            <column name="calculation_state_id" value="2"/>
+        </insert>
+
+        <insert tableName="calculation">
+            <column name="customer_id" value="3"/>
+            <column name="address_object_constractions" value="Какой-то адрес"/>
+            <column name="created_date" value="${now}"/>
+            <column name="results_id" value="2"/>
+            <column name="calculation_state_id" value="2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

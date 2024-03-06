@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="insert-data-into-customers-table" author="barakovskaya_elena">
+        <insert tableName="customers">
+            <column name="last_name" value="Иванов"/>
+            <column name="first_name" value="Иван"/>
+            <column name="second_name" value="Иванович"/>
+            <column name="phone" value="89239547834"/>
+            <column name="e-mail" value="i.ivanov@mail.ru"/>
+            <column name="address" value="Ул. Пушкина, д. Колотушкина"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="customers">
+            <column name="last_name" value="Миронова"/>
+            <column name="first_name" value="Вероника"/>
+            <column name="second_name" value="Артемовна"/>
+            <column name="phone" value="8945838567"/>
+            <column name="e-mail" value="v.mironova@mail.ru"/>
+            <column name="address" value="Ул. Пушкина, д. Колотушкина"/>
+            <column name="user_id" value="1"/>
+        </insert>
+
+        <insert tableName="customers">
+            <column name="last_name" value="Минин"/>
+            <column name="first_name" value="Алексей"/>
+            <column name="second_name" value="Дмитриевич"/>
+            <column name="phone" value="89237540124"/>
+            <column name="e-mail" value="a.minin@mail.ru"/>
+            <column name="address" value="Ул. Пушкина, д. Колотушкина"/>
+            <column name="user_id" value="2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

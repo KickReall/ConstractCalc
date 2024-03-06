@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="insert-data-into-measurement-units-table" author="barakovskaya_elena">
+        <insert tableName="measurement_units">
+            <column name="measurement_units_name" value="kg"/>
+        </insert>
+
+        <insert tableName="measurement_units">
+            <column name="measurement_units_name" value="m3"/>
+        </insert>
+
+        <insert tableName="measurement_units">
+            <column name="measurement_units_name" value="m2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

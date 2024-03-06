@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="insert-data-into-calculation-state-table" author="barakovskaya_elena">
+        <insert tableName="calculation_state">
+            <column name="name" value="Актуален"/>
+        </insert>
+        <insert tableName="calculation_state">
+            <column name="name" value="Не актуален"/>
+        </insert>
+        <insert tableName="calculation_state">
+            <column name="name" value="Заключен договор"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

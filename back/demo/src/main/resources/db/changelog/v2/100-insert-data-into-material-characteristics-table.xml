@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="insert-data-into-material_characteristics-table" author="barakovskaya_elena">
+        <insert tableName="material_characteristics">
+            <column name="name" value="Доска"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="1"/>
+            <column name="length" value="3000"/>
+            <column name="width" value="200"/>
+            <column name="thickness" value="50"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Фасад"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="2"/>
+            <column name="volume" value="200"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="OSB"/>
+            <column name="measurement_unit_id" value="3"/>
+            <column name="materials_id" value="3"/>
+            <column name="volume" value="10"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Ондутис"/>
+            <column name="measurement_unit_id" value="3"/>
+            <column name="materials_id" value="4"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Ветро-влагозащитная мембрана Brane A"/>
+            <column name="measurement_unit_id" value="3"/>
+            <column name="materials_id" value="5"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
