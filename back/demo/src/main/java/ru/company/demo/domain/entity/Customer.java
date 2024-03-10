@@ -60,7 +60,7 @@ public class Customer{
     /**
      * Связанный с заказчиком сотрудник {@code User}
      */
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
