@@ -6,3 +6,6 @@ spring:
     password: postgres
   liquibase:
     change-log: classpath:db/changelog-master.xml
+jwt:
+  secret: rastishka_na_virost_2024
+  lifetime: 60m
