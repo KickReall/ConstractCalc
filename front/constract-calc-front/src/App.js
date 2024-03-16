@@ -10,7 +10,8 @@ import Home from "./pages/Home";
 
 function RequireAuth({ children, redirectTo }) {
     const token = localStorage.getItem('token');
-    return token ? children : <Navigate to={redirectTo} />;
+    const user = localStorage.getItem('user');
+    return (token && user) ? children : <Navigate to={redirectTo} />;
 }
 
 function App() {
