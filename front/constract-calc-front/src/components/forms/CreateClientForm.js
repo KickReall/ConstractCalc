@@ -7,8 +7,9 @@ import {
     MDBModalDialog, MDBModalFooter,
     MDBModalHeader, MDBModalTitle,
 } from "mdb-react-ui-kit";
+import ClientService from "../../services/ClientService";
 
-const CreateClientForm = ({style}) => {
+const CreateClientForm = ({style, createClient}) => {
     const [basicModal, setBasicModal] = React.useState(false);
     const [lastname, setLastname] = React.useState('');
     const [firstname, setFirstname] = React.useState('');
@@ -16,6 +17,21 @@ const CreateClientForm = ({style}) => {
     const [telephone, setTelephone] = React.useState();
     const [email, setEmail] = React.useState('');
     const [address, setAddress] = React.useState('');
+
+    const onSubmit = () => {
+        const client = {
+            firstName: firstname,
+            lastName: lastname,
+            secondName: patronymic,
+            phone: telephone,
+            mail: email,
+            address: address,
+            user: {
+                id: JSON.parse(localStorage.getItem("user"))?.id || "1"
+            }
+        }
+        createClient(client);
+    }
 
     const toggleOpen = () => setBasicModal(!basicModal);
     return (
@@ -44,7 +60,7 @@ const CreateClientForm = ({style}) => {
                                       onChange={(e) => setAddress(e.target.value)}/>
                         </MDBModalBody>
                         <MDBModalFooter>
-                            <MDBBtn>Сохранить</MDBBtn>
+                            <MDBBtn onClick={onSubmit}>Сохранить</MDBBtn>
                         </MDBModalFooter>
                     </MDBModalContent>
                 </MDBModalDialog>
