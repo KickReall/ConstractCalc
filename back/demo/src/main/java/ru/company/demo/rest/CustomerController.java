@@ -1,6 +1,7 @@
 package ru.company.demo.rest;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import ru.company.demo.business.dto.customer.CustomerNameDto;
 import ru.company.demo.business.dto.customer.CustomersCardDto;
@@ -13,11 +14,12 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/customers")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CustomerController {
 
     private final CustomerService customerService;
 
-    @PostMapping
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public SavedCustomerDto createCustomer(@RequestBody Customer customer) {
         return customerService.createCustomer(customer);
     }
