@@ -22,9 +22,12 @@ const Home = () => {
     const onSaveClient = async (client) => {
         await ClientService.create(client)
             .then(data => {
-                console.log(data)
+                const copyClients = clients.concat([]);
+                copyClients.push(data.data);
+                setClients(copyClients);
             });
     }
+
   return (
     <div className='page'>
       <Header />
