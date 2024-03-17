@@ -4,7 +4,7 @@ import AuthService from "../services/AuthService";
 
 const BaseAxios = axios.create({
     // withCredentials: true,
-    baseURL: process.env.REACT_APP_BACK
+    baseURL: process.env.REACT_APP_BACK || "http://localhost:8080"
 });
 
 // BaseAxios.interceptors.request.use((config) => {
