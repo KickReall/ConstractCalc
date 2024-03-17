@@ -9,7 +9,7 @@ import {
     MDBModalTitle
 } from "mdb-react-ui-kit";
 
-const EditClientForm = () => {
+const EditClientForm = ({style}) => {
     const [basicModal, setBasicModal] = React.useState(false);
     const [lastname, setLastname] = React.useState('');
     const [firstname, setFirstname] = React.useState('');
@@ -22,7 +22,7 @@ const EditClientForm = () => {
     const toggleOpen = () => setBasicModal(!basicModal);
     return (
         <>
-            <MDBBtn onClick={toggleOpen}>Информация о клиенте</MDBBtn>
+            <MDBBtn onClick={toggleOpen} className={style}>Информация о клиенте</MDBBtn>
             <MDBModal open={basicModal} setOpen={setBasicModal} tabIndex='-1'>
                 <MDBModalDialog>
                     <MDBModalContent>

@@ -6,6 +6,7 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import LoginPage from "./pages/LoginPage";
 import Home from "./pages/Home";
+import ClientCard from './pages/ClientCard';
 
 
 function RequireAuth({ children, redirectTo }) {
@@ -30,6 +31,7 @@ function App() {
                         }
                     />
                     <Route path="*" element={<Home /> }/>
+                    <Route path="/card" element={<ClientCard/>}/>
                 </Routes>
             </MDBContainer>
         </div>
