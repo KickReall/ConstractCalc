@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.company.demo.business.service.CalculationService;
 import ru.company.demo.domain.entity.Calculation;
 
-@CrossOrigin
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/calculation")
