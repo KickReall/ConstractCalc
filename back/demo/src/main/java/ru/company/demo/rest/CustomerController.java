@@ -10,6 +10,7 @@ import ru.company.demo.domain.entity.Customer;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/customers")
