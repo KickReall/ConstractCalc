@@ -62,4 +62,19 @@ body{
     margin-left: 20px;
   }
 
+
+  @media only screen and (max-width: 600px) {
+    .home-container {
+        height: auto; 
+    }
+
+    .client-card {
+        width: 100%; 
+    }
+
+    .create-button {
+        margin-left: 5px; 
+    }
+}
+
   
