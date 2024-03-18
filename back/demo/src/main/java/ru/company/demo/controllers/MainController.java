@@ -11,12 +11,12 @@ import java.security.Principal;
 @RequiredArgsConstructor
 public class MainController {
 
-    @GetMapping("/unsequred")
+    @GetMapping("/unsecured")
     public String unsequredData(){
         return "Unsecured data";
     }
 
-    @GetMapping("/sequred")
+    @GetMapping("/secured")
     public String sequredData(){
         return "Secured data";
     }

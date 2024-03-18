@@ -2,6 +2,7 @@ package ru.company.demo.service;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -10,7 +11,9 @@ import ru.company.demo.entity.User;
 import ru.company.demo.repository.UserGroupRepository;
 import ru.company.demo.repository.UserRepository;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -32,7 +35,11 @@ public class UserService implements UserDetailsService {
         return new org.springframework.security.core.userdetails.User(
                 user.getLogin(),
                 user.getPassword(),
+                user.getGroups().stream().map(userGroup -> new SimpleGrantedAuthority(userGroup.getTitle())).collect(Collectors.toList())
 
         );
     }
+
+
+
 }
