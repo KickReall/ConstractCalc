@@ -52,7 +52,7 @@ const CreateClientForm = ({style, createClient}) => {
                             <MDBInput className='mb-4' type='text' id='patronymic' label='Отчество' value={patronymic}
                                       onChange={(e) => setPatronymic(e.target.value)}/>
                             <MDBInput className='mb-4' type='tel' id='telephone' label='Телефон'
-                                      placeholder={"+7xxxxxxxxxx"} maxLength={12} value={telephone}
+                                      placeholder={"8xxxxxxxxxx"} maxLength={11} value={telephone}
                                       onChange={(e) => setTelephone(e.target.value)}/>
                             <MDBInput className='mb-4' type='email' id='email' label='E-mail' value={email}
                                       onChange={(e) => setEmail(e.target.value)}/>
