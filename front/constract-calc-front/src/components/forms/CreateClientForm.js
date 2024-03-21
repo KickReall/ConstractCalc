@@ -9,12 +9,12 @@ import {
 } from "mdb-react-ui-kit";
 import ClientService from "../../services/ClientService";
 
-const CreateClientForm = ({style, createClient}) => {
+const CreateClientForm = ({ style, createClient }) => {
     const [basicModal, setBasicModal] = React.useState(false);
     const [lastname, setLastname] = React.useState('');
     const [firstname, setFirstname] = React.useState('');
     const [patronymic, setPatronymic] = React.useState('');
-    const [telephone, setTelephone] = React.useState();
+    const [telephone, setTelephone] = React.useState('');
     const [email, setEmail] = React.useState('');
     const [address, setAddress] = React.useState('');
 
@@ -29,9 +29,13 @@ const CreateClientForm = ({style, createClient}) => {
             user: {
                 id: JSON.parse(localStorage.getItem("user"))?.id || "1"
             }
-        }
+        };
+        
         createClient(client);
-    }
+
+        // закрытие формы
+        setBasicModal(false);
+    };
 
     const toggleOpen = () => setBasicModal(!basicModal);
     return (
@@ -46,18 +50,18 @@ const CreateClientForm = ({style, createClient}) => {
                         </MDBModalHeader>
                         <MDBModalBody>
                             <MDBInput className='mb-4' type='text' id='lastname' label='Фамилия' value={lastname}
-                                      onChange={(e) => setLastname(e.target.value)}/>
+                                       onChange={(e) => setLastname(e.target.value)} />
                             <MDBInput className='mb-4' type='text' id='firstname' label='Имя' value={firstname}
-                                      onChange={(e) => setFirstname(e.target.value)}/>
+                                       onChange={(e) => setFirstname(e.target.value)} />
                             <MDBInput className='mb-4' type='text' id='patronymic' label='Отчество' value={patronymic}
-                                      onChange={(e) => setPatronymic(e.target.value)}/>
+                                       onChange={(e) => setPatronymic(e.target.value)} />
                             <MDBInput className='mb-4' type='tel' id='telephone' label='Телефон'
-                                      placeholder={"8xxxxxxxxxx"} maxLength={11} value={telephone}
-                                      onChange={(e) => setTelephone(e.target.value)}/>
+                                       placeholder={"8xxxxxxxxxx"} maxLength={11} value={telephone}
+                                       onChange={(e) => setTelephone(e.target.value)} />
                             <MDBInput className='mb-4' type='email' id='email' label='E-mail' value={email}
-                                      onChange={(e) => setEmail(e.target.value)}/>
+                                       onChange={(e) => setEmail(e.target.value)} />
                             <MDBInput className='mb-4' type='text' id='address' label='Адрес' value={address}
-                                      onChange={(e) => setAddress(e.target.value)}/>
+                                       onChange={(e) => setAddress(e.target.value)} />
                         </MDBModalBody>
                         <MDBModalFooter>
                             <MDBBtn onClick={onSubmit}>Сохранить</MDBBtn>

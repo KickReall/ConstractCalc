@@ -1,6 +1,4 @@
-.page {
-    
-}
+
 
 .container-fluid {
     margin-left: inherit;
@@ -37,6 +35,8 @@
 .nav {
     float: left;
     position: relative;
+    user-select: none;
+    color: #1A2F63;
 }
 
 .arrow-right {
