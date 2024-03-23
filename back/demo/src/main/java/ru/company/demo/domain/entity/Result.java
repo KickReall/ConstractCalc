@@ -30,7 +30,7 @@ public class Result {
      * Ссылка на связанные расчеты
      */
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="calculation_id")
+//    @JoinColumn(name="calculation_id")
     @JsonIgnore
     private Calculation calculation;
 
