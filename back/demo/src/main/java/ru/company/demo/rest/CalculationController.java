@@ -11,6 +11,7 @@ import ru.company.demo.domain.entity.StructuralElementFrame;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/calculation")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CalculationController {
 
     private final CalculationService calculationService;
