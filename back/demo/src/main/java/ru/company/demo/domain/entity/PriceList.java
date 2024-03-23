@@ -1,5 +1,6 @@
 package ru.company.demo.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,12 +33,13 @@ public class PriceList{
      * Дата
      */
     @Column(name="date")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd.MM.yyyy")
     private LocalDate date;
 
     /**
      * Стоимость закупки
      */
-    @Column(name="purhcase_price")
+    @Column(name="purchase_price")
     private float purchasePrice;
 
     /**

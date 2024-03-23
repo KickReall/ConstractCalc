@@ -4,15 +4,15 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
     <changeSet id="insert-data-into-materials-table" author="barakovskaya_elena">
         <insert tableName="materials">
-            <column name="name" value="Доска"/>
+            <column name="name" value="Пиломатериал"/>
+        </insert>
+
+        <insert tableName="materials">
+            <column name="name" value="OSB"/>
         </insert>
 
         <insert tableName="materials">
             <column name="name" value="Утеплитель"/>
-        </insert>
-
-        <insert tableName="materials">
-            <column name="name" value="ОСБ"/>
         </insert>
 
         <insert tableName="materials">

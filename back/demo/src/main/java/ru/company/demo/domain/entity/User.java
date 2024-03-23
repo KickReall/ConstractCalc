@@ -1,5 +1,6 @@
 package ru.company.demo.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,7 @@ public class User {
      * Список связанных заказчиков {@code Customer}
      */
     @OneToMany(mappedBy = "user")
+    @JsonIgnore
     private List<Customer> customers;
 
     /**

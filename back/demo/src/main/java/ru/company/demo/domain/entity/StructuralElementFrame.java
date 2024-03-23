@@ -21,9 +21,9 @@ public class StructuralElementFrame {
     /**
      * Ссылка на результат {@code Result}
      */
-    @ManyToOne(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="results_id")
-    private Result result;
+    private List<Result> result;
 
     /**
      * Список проемов {@code Opening}
@@ -86,7 +86,7 @@ public class StructuralElementFrame {
      * ОСБ обшивка внешних стен
      */
     @Column(name="OSB_external_wall")
-    private String OSBExternalWall;
+    private String osbExternalWall;
 
     /**
      * Парогидроизоляция обшивка внешних стен
@@ -110,13 +110,13 @@ public class StructuralElementFrame {
      * Толщина перекрытия
      */
     @Column(name="overlap_thickness")
-    private String overlapThickness;
+    private float overlapThickness;
 
     /**
      * Толщина ОСБ
      */
     @Column(name="OSB_thickness")
-    private String OSBThickness;
+    private String osbThickness;
 
     /**
      * Толщина парогидроизоляции
@@ -140,6 +140,6 @@ public class StructuralElementFrame {
      * ОСБ внутренних стен
      */
     @Column(name="OSB_internal_wall")
-    private String OSBInternalWall;
+    private String osbInternalWall;
 
 }

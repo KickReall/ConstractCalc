@@ -1,5 +1,6 @@
 package ru.company.demo.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import jakarta.persistence.Entity;
@@ -18,7 +19,7 @@ public class MaterialCharacteristic {
      */
     @Id
     @GeneratedValue(generator = "material_characteristics_id_seq")
-    private int id;
+    private Integer id;
 
     /**
      * Название характеристики
@@ -38,29 +39,30 @@ public class MaterialCharacteristic {
      */
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="materials_id")
+    @JsonIgnore
     private Material material;
 
     /**
      * Длина
      */
     @Column(name="length")
-    private float length;
+    private Float length;
 
     /**
      * Ширина
      */
     @Column(name="width")
-    private float width;
+    private Float width;
 
     /**
      * Толщина
      */
     @Column(name="thickness")
-    private float thickness;
+    private Float thickness;
 
     /**
      * Объем
      */
     @Column(name="volume")
-    private float volume;
+    private Float volume;
 }

@@ -1,10 +1,12 @@
 package ru.company.demo.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "results")
@@ -25,6 +27,14 @@ public class Result {
     private MaterialCharacteristic materialCharacteristics;
 
     /**
+     * Ссылка на связанные расчеты
+     */
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="calculation_id")
+    @JsonIgnore
+    private Calculation calculation;
+
+    /**
      * Материал
      */
     @Column(name="material")
@@ -34,7 +44,7 @@ public class Result {
      * Количество
      */
     @Column(name="amount")
-    private int amount;
+    private float amount;
 
     /**
      * Стоимость
@@ -43,11 +53,9 @@ public class Result {
     private float price;
 
     /**
-     * Ссылка на единицу измерения {@code MeasurementUnit}
+     * Единица измерения
      */
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="measurement_unit")
-    private MeasurementUnit measurementUnit;
+    private String measurementUnit;
 
     /**
      * Общая стоимость

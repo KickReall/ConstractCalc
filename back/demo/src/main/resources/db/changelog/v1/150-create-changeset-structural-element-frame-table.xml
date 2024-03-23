@@ -49,7 +49,7 @@
         <column name="insulation_external_wall" type="varchar" remarks="Утеплитель внешних стен">
             <constraints nullable="false"/>
         </column>
-        <column name="overlap_thickness" type="varchar" remarks="Толщина перекрытия">
+        <column name="overlap_thickness" type="float" remarks="Толщина перекрытия">
             <constraints nullable="false"/>
         </column>
         <column name="OSB_thickness" type="varchar" remarks="ОСБ на перекрытия">

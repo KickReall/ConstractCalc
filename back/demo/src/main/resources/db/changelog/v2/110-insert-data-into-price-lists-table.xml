@@ -7,36 +7,197 @@
         <insert tableName="price_lists">
             <column name="material_characteristics_id" value="1"/>
             <column name="date" value="${now}"/>
-            <column name="purchase_price" value="115.5"/>
-            <column name="selling_price" value="150.0"/>
+            <column name="purchase_price" value="5000"/>
+            <column name="selling_price" value="12000"/>
         </insert>
 
         <insert tableName="price_lists">
             <column name="material_characteristics_id" value="2"/>
             <column name="date" value="${now}"/>
-            <column name="purchase_price" value="45.4"/>
-            <column name="selling_price" value="70.0"/>
+            <column name="purchase_price" value="5000"/>
+            <column name="selling_price" value="12000"/>
         </insert>
 
         <insert tableName="price_lists">
             <column name="material_characteristics_id" value="3"/>
             <column name="date" value="${now}"/>
-            <column name="purchase_price" value="345.5"/>
-            <column name="selling_price" value="500.0"/>
+            <column name="purchase_price" value="5000"/>
+            <column name="selling_price" value="12000"/>
         </insert>
 
         <insert tableName="price_lists">
             <column name="material_characteristics_id" value="4"/>
             <column name="date" value="${now}"/>
-            <column name="purchase_price" value="33.2"/>
-            <column name="selling_price" value="50.6"/>
+            <column name="purchase_price" value="5000"/>
+            <column name="selling_price" value="12000"/>
         </insert>
 
         <insert tableName="price_lists">
             <column name="material_characteristics_id" value="5"/>
             <column name="date" value="${now}"/>
-            <column name="purchase_price" value="45.4"/>
-            <column name="selling_price" value="70.0"/>
+            <column name="purchase_price" value="5000"/>
+            <column name="selling_price" value="12000"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="6"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="5000"/>
+            <column name="selling_price" value="12000"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="7"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="5000"/>
+            <column name="selling_price" value="12000"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="8"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="5000"/>
+            <column name="selling_price" value="12000"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="9"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="5000"/>
+            <column name="selling_price" value="12000"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="10"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="5000"/>
+            <column name="selling_price" value="12000"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="11"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="150"/>
+            <column name="selling_price" value="256"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="12"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="200"/>
+            <column name="selling_price" value="288"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="13"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="290"/>
+            <column name="selling_price" value="384"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="14"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="380"/>
+            <column name="selling_price" value="480"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="15"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="2000"/>
+            <column name="selling_price" value="3000"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="16"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="2800"/>
+            <column name="selling_price" value="3500"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="17"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="1900"/>
+            <column name="selling_price" value="2800"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="18"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="1900"/>
+            <column name="selling_price" value="2800"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="19"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="1900"/>
+            <column name="selling_price" value="2800"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="20"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="1900"/>
+            <column name="selling_price" value="3200"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="21"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="1900"/>
+            <column name="selling_price" value="2800"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="22"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="15"/>
+            <column name="selling_price" value="33"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="23"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="10"/>
+            <column name="selling_price" value="20"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="24"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="10"/>
+            <column name="selling_price" value="21"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="25"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="5"/>
+            <column name="selling_price" value="11"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="26"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="32"/>
+            <column name="selling_price" value="57"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="27"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="10"/>
+            <column name="selling_price" value="21"/>
+        </insert>
+
+        <insert tableName="price_lists">
+            <column name="material_characteristics_id" value="28"/>
+            <column name="date" value="${now}"/>
+            <column name="purchase_price" value="38"/>
+            <column name="selling_price" value="53"/>
         </insert>
     </changeSet>
 </databaseChangeLog>

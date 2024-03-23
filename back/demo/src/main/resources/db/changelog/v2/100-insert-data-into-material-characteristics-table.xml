@@ -4,7 +4,25 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
     <changeSet id="insert-data-into-material_characteristics-table" author="barakovskaya_elena">
         <insert tableName="material_characteristics">
-            <column name="name" value="Доска"/>
+            <column name="name" value="Доска 50*100*3000"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="1"/>
+            <column name="length" value="3000"/>
+            <column name="width" value="100"/>
+            <column name="thickness" value="50"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Доска 50*150*3000"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="1"/>
+            <column name="length" value="3000"/>
+            <column name="width" value="150"/>
+            <column name="thickness" value="50"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Доска 50*200*3000"/>
             <column name="measurement_unit_id" value="2"/>
             <column name="materials_id" value="1"/>
             <column name="length" value="3000"/>
@@ -13,29 +31,186 @@
         </insert>
 
         <insert tableName="material_characteristics">
-            <column name="name" value="Фасад"/>
+            <column name="name" value="Доска 50*250*3000"/>
             <column name="measurement_unit_id" value="2"/>
-            <column name="materials_id" value="2"/>
-            <column name="volume" value="200"/>
+            <column name="materials_id" value="1"/>
+            <column name="length" value="3000"/>
+            <column name="width" value="250"/>
+            <column name="thickness" value="50"/>
         </insert>
 
         <insert tableName="material_characteristics">
-            <column name="name" value="OSB"/>
+            <column name="name" value="Доска 50*300*3000"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="1"/>
+            <column name="length" value="3000"/>
+            <column name="width" value="300"/>
+            <column name="thickness" value="50"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Доска 50*100*6000"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="1"/>
+            <column name="length" value="6000"/>
+            <column name="width" value="100"/>
+            <column name="thickness" value="50"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Доска 50*150*6000"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="1"/>
+            <column name="length" value="6000"/>
+            <column name="width" value="150"/>
+            <column name="thickness" value="50"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Доска 50*200*6000"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="1"/>
+            <column name="length" value="6000"/>
+            <column name="width" value="200"/>
+            <column name="thickness" value="50"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Доска 50*250*6000"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="1"/>
+            <column name="length" value="6000"/>
+            <column name="width" value="250"/>
+            <column name="thickness" value="50"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Доска 50*300*6000"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="1"/>
+            <column name="length" value="6000"/>
+            <column name="width" value="300"/>
+            <column name="thickness" value="50"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="OSB 9 мм"/>
             <column name="measurement_unit_id" value="3"/>
-            <column name="materials_id" value="3"/>
+            <column name="materials_id" value="2"/>
+            <column name="volume" value="9"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="OSB 10 мм"/>
+            <column name="measurement_unit_id" value="3"/>
+            <column name="materials_id" value="2"/>
             <column name="volume" value="10"/>
         </insert>
 
         <insert tableName="material_characteristics">
-            <column name="name" value="Ондутис"/>
+            <column name="name" value="OSB 15 мм"/>
             <column name="measurement_unit_id" value="3"/>
+            <column name="materials_id" value="2"/>
+            <column name="volume" value="15"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="OSB 18 мм"/>
+            <column name="measurement_unit_id" value="3"/>
+            <column name="materials_id" value="2"/>
+            <column name="volume" value="18"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Кнауф ТеплоКнауф 100 мм"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="3"/>
+            <column name="volume" value="100"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Технониколь 100 мм"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="3"/>
+            <column name="volume" value="100"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Эковер 100 мм"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="3"/>
+            <column name="volume" value="100"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Эковер 150 мм"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="3"/>
+            <column name="volume" value="150"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Эковер 200 мм"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="3"/>
+            <column name="volume" value="200"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Фасад 200 мм"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="3"/>
+            <column name="volume" value="200"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Эковер 250 мм"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="3"/>
+            <column name="volume" value="250"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Ондутис"/>
+            <column name="measurement_unit_id" value="2"/>
             <column name="materials_id" value="4"/>
         </insert>
 
         <insert tableName="material_characteristics">
-            <column name="name" value="Ветро-влагозащитная мембрана Brane A"/>
-            <column name="measurement_unit_id" value="3"/>
+            <column name="name" value="Пароизоляция Axton (b)"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="4"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Пароизоляционная пленка Ютафол Н 96 Сильвер"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="4"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Пароизоляция В"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="4"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Ветро-влагозащитная мембрана Brane А"/>
+            <column name="measurement_unit_id" value="2"/>
             <column name="materials_id" value="5"/>
         </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Паропроницаемая ветро-влагозащита A Optima"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="5"/>
+        </insert>
+
+        <insert tableName="material_characteristics">
+            <column name="name" value="Гидро-ветрозащита Тип А"/>
+            <column name="measurement_unit_id" value="2"/>
+            <column name="materials_id" value="5"/>
+        </insert>
+
     </changeSet>
 </databaseChangeLog>

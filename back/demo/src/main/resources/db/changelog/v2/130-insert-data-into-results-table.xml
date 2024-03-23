@@ -5,6 +5,7 @@
     <changeSet id="insert-data-into-results-table" author="barakovskaya_elena">
         <insert tableName="results">
             <column name="material_characteristics_id" value="1"/>
+            <column name="calculation_id" value="1"/>
             <column name="material" value="Доска"/>
             <column name="amount" value="5"/>
             <column name="price" value="150.0"/>
@@ -14,6 +15,7 @@
 
         <insert tableName="results">
             <column name="material_characteristics_id" value="2"/>
+            <column name="calculation_id" value="1"/>
             <column name="material" value="Фасад"/>
             <column name="amount" value="5"/>
             <column name="price" value="150.0"/>
@@ -23,6 +25,7 @@
 
         <insert tableName="results">
             <column name="material_characteristics_id" value="3"/>
+            <column name="calculation_id" value="2"/>
             <column name="material" value="OSB"/>
             <column name="amount" value="5"/>
             <column name="price" value="150.0"/>
