@@ -21,11 +21,11 @@
             <column name="created_date" type="datetime" remarks="Дата создания" value="current_date">
                 <constraints nullable="false"/>
             </column>
-            <column name="results_id" type="int" remarks="ID Результаты">
-                <constraints nullable="false"
-                             foreignKeyName="calculation-results-id-results_id"
-                             references="results(id)"/>
-            </column>
+<!--            <column name="results_id" type="int" remarks="ID Результаты">-->
+<!--                <constraints nullable="false"-->
+<!--                             foreignKeyName="calculation-results-id-results_id"-->
+<!--                             references="results(id)"/>-->
+<!--            </column>-->
             <column name="calculation_state_id" type="int" remarks="Статус">
                 <constraints nullable="false"
                              foreignKeyName="calculation-state-id-state_id"
