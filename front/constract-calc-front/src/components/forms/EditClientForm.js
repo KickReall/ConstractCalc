@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ClientService from "../../services/ClientService";
 import {
     MDBBtn, MDBInput,
@@ -12,44 +12,35 @@ import {
 
 const EditClientForm = ({ style, clientId }) => {
     const [basicModal, setBasicModal] = React.useState(false);
+    const [client, setClient] = React.useState(null);
     const [lastname, setLastname] = React.useState('');
     const [firstname, setFirstname] = React.useState('');
     const [patronymic, setPatronymic] = React.useState('');
-    const [telephone, setTelephone] = React.useState();
+    const [telephone, setTelephone] = React.useState('');
     const [email, setEmail] = React.useState('');
     const [address, setAddress] = React.useState('');
     const [isEdit, setIsEdit] = React.useState(false);
 
     const toggleOpen = () => setBasicModal(!basicModal);
 
-    const [clients, setClients] = React.useState([]);
+    useEffect(() => {
+        const getClientDetails = async () => {
+            try {
+                const response = await ClientService.getById(clientId);
+                setClient(response.data);
+                console.log(response.data);
+            } catch (error) {
+                console.error('Error fetching client details:', error);
+            }
+        };
 
-    React.useEffect(() => {
-        const getAllClients = async () => {
-            await ClientService.getAll().then((data) => {
-                console.log(data.firstName);
-                setClients(data.data);
-            });
-        }
-        getAllClients();
-    }, []);
+        getClientDetails();
 
-    const getClientNameById = (clientId) => {
-        const client = clients.find(client => client.id === clientId);
-        return client ? client.firstName : "Имя не найдено";
+    }, [clientId]);
+
+    if (!client) {
+        return <div>Loading...</div>;
     }
-
-    const getClientLastNameById = (clientId) => {
-        const client = clients.find(client => client.id === clientId);
-        return client ? client.lastName : "Фамилия не найдено";
-    }
-
-    const getClientPatronymicById = (clientId) => {
-        const client = clients.find(client => client.id === clientId);
-        return client ? client.secondName : "Отчество не найдено";
-    }
-
-
 
     return (
         <>
@@ -58,24 +49,39 @@ const EditClientForm = ({ style, clientId }) => {
                 <MDBModalDialog>
                     <MDBModalContent>
                         <MDBModalHeader>
-                            <MDBModalTitle>{isEdit === true ? "Редактирование" : "Информация"}</MDBModalTitle>
-                            <MDBBtn className='btn-close' color='none' onClick={toggleOpen}></MDBBtn>
+                            <MDBModalTitle>{isEdit ? "Редактирование" : "Информация"}</MDBModalTitle>
+
                         </MDBModalHeader>
                         <MDBModalBody>
-                            <MDBInput className='mb-4' type='text' id='lastname' label='Фамилия' value={getClientLastNameById(clientId)}
+                            <MDBInput
+                                className='mb-4'
+                                type='text'
+                                id='lastname'
+                                label='Фамилия'
+                                value={client.lastName}
                                 onChange={(e) => setLastname(e.target.value)}
-                                disabled={isEdit ? false : true}
+                                disabled={!isEdit}
                             />
-                            <MDBInput className='mb-4' type='text' id='firstname' label='Имя' value={getClientNameById(clientId)}
+                            <MDBInput
+                                className='mb-4'
+                                type='text'
+                                id='firstname'
+                                label='Имя'
+                                value={client.firstName}
                                 onChange={(e) => setFirstname(e.target.value)}
-                                disabled={isEdit ? false : true}
+                                disabled={!isEdit}
                             />
-                            <MDBInput className='mb-4' type='text' id='patronymic' label='Отчество' value={getClientPatronymicById(clientId)}
+                            <MDBInput
+                                className='mb-4'
+                                type='text'
+                                id='patronymic'
+                                label='Отчество'
+                                value={client.secondName}
                                 onChange={(e) => setPatronymic(e.target.value)}
-                                disabled={isEdit ? false : true}
+                                disabled={!isEdit}
                             />
                             <MDBInput className='mb-4' type='tel' id='telephone' label='Телефон'
-                                placeholder={"8xxxxxxxxxx"} maxLength={11} value={telephone}
+                                placeholder={"8xxxxxxxxxx"} maxLength={11} value={client.phone}
                                 onChange={(e) => setTelephone(e.target.value)}
                                 disabled={isEdit ? false : true}
                             />
@@ -83,7 +89,7 @@ const EditClientForm = ({ style, clientId }) => {
                                 onChange={(e) => setEmail(e.target.value)}
                                 disabled={isEdit ? false : true}
                             />
-                            <MDBInput className='mb-4' type='text' id='address' label='Адрес' value={address}
+                            <MDBInput className='mb-4' type='text' id='address' label='Адрес' value={client.address}
                                 onChange={(e) => setAddress(e.target.value)}
                                 disabled={isEdit ? false : true}
                             />

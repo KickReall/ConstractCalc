@@ -1,36 +1,34 @@
-
-
 .container-fluid {
     margin-left: inherit;
-    margin-left: inherit ;
+    margin-left: inherit;
 }
 
 
-.edit-button{
+.edit-button {
     margin-left: 20px;
     width: 12%;
 }
 
-.create-calc{
+.create-calc {
     width: 12%;
     margin-top: 10px;
     margin-left: 20px;
-    
-  }
+
+}
 
 
-  .card-text{
+.card-text {
     margin-top: 40px;
     margin-right: 120px;
-    
+
     user-select: none;
     color: #1A2F63;
-  }
+}
 
-  .pers-nav-body{
+.pers-nav-body {
     margin-top: 20px;
     margin-left: 20px;
-  }
+}
 
 .nav {
     float: left;
@@ -46,31 +44,32 @@
     margin-right: 9px;
 }
 
-.nav::before { 
-    content: ''; 
-    position: absolute; 
-    width: 100%; 
-    height: 2px; 
-    background-color: #311e1e; 
-    bottom: 0; 
-    left: 0; 
-    transform-origin: right; 
-    transform: scaleX(0); 
+.nav::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #311e1e;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
     transition: transform .3s ease-in-out;
-} 
-
-
-.nav:hover::before { 
-transform-origin: left; 
-transform: scaleX(1);
 }
 
-.question-header{
+
+.nav:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.question-header {
     margin-top: 40px;
     margin-bottom: 40px;
     margin-left: 10px;
 }
-.nav-body{
+
+.nav-body {
     margin-left: 11px;
 }
 
@@ -82,42 +81,41 @@ transform: scaleX(1);
 
 .client-bar button,
 .client-bar div {
-    display: inline-block; 
+    display: inline-block;
 }
 
 .client-bar button {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .client-bar div {
-    margin-left: 20px; 
+    
 }
+
 .status-dropdown {
     position: relative;
     display: inline-block;
 }
 
-.status-dropdown > div {
-    
-    
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    
+.status-dropdown>div {
+
+
+
+
+
     z-index: 1;
 }
 
 .status-dropdown button {
-    
-    
-    
+
+
+
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
     
+
     cursor: pointer;
 }
 
-.status-dropdown button:hover {
-    
-}
+.status-dropdown button:hover {}

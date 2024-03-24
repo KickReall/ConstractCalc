@@ -7,6 +7,15 @@ import './ClientCard.css';
 import ClientService from '../services/ClientService';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import {
+    MDBBtn, MDBInput,
+    MDBModal,
+    MDBModalBody,
+    MDBModalContent,
+    MDBModalDialog, MDBModalFooter,
+    MDBModalHeader,
+    MDBModalTitle
+} from "mdb-react-ui-kit";
 
 const statusOptions = ['Актуален', 'Не актуален', 'Заключен договор'];
 
@@ -15,6 +24,23 @@ const ClientCard = ({ clientId }) => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedStatus, setSelectedStatus] = useState('');
     const [showStatusDropdown, setShowStatusDropdown] = useState(false);
+    const [mainButtonColor, setMainButtonColor] = useState('transparent');
+    const [selectedColor, setSelectedColor] = useState('');
+    const [showClientBar, setShowClientBar] = useState(false);
+    
+
+
+    const statusOptions = ['Актуален', 'Не актуален', 'Заключен договор'];
+    const statusColors = {
+        'Актуален': 'orange',
+        'Не актуален': 'red',
+        'Заключен договор': 'green',
+    };
+
+    useEffect(() => {
+        setMainButtonColor(selectedColor);
+    }, [selectedColor]);
+
 
     useEffect(() => {
         const getAllClients = async () => {
@@ -44,6 +70,7 @@ const ClientCard = ({ clientId }) => {
 
     const handleStatusChange = (status) => {
         setSelectedStatus(status);
+        setSelectedColor(statusColors[status]);
         setShowStatusDropdown(false);
     };
 
@@ -56,8 +83,12 @@ const ClientCard = ({ clientId }) => {
     };
 
     const handleDeleteClient = () => {
-        // Handle client deletion logic here
+        setShowClientBar(false);
     };
+
+    const handleCreateCalculation = () => {
+        setShowClientBar(true);
+    }
 
     return (
         <>
@@ -78,31 +109,33 @@ const ClientCard = ({ clientId }) => {
             <div className='page'>
                 <h1 className='card-text'>Карточка клиента</h1>
                 <EditClientForm clientId={clientId} style='edit-button' />
-                <CreateCalculation style='create-calc' />
-                <div className='client-bar'>
-                    <button onClick={handleCalculate}>Расчет</button>
-                    <button onClick={handleShowDate}>Выбрать дату: {selectedDate ? selectedDate.toLocaleDateString() : 'Дата не выбрана'}</button>
-                    <div id="datepicker" style={{ display: 'none' }}>
-                        <DatePicker selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
+                <CreateCalculation style={'create-calc'} handleCreateCalculation={handleCreateCalculation}  />
+                {showClientBar && (
+                    <div className='client-bar'>
+                        <MDBBtn onClick={handleCalculate}>Расчет</MDBBtn>
+                        <MDBBtn onClick={handleShowDate}>Выбрать дату: {selectedDate ? selectedDate.toLocaleDateString() : 'Дата не выбрана'}</MDBBtn>
+                        <div id="datepicker" style={{ display: 'none' }}>
+                            <DatePicker selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
+                        </div>
+                        <div className="status-dropdown">
+                            <MDBBtn onClick={handleToggleStatusDropdown} style={{ backgroundColor: mainButtonColor }}>Изменить статус: {selectedStatus || 'Выберите статус'}</MDBBtn>
+                            {showStatusDropdown &&
+                                <div>
+                                    {statusOptions.map((option) => (
+                                        <MDBBtn key={option} onClick={() => handleStatusChange(option)} style={{ backgroundColor: statusColors[option] }}>{option}</MDBBtn>
+                                    ))}
+                                </div>
+                            }
+                        </div>
+                        <MDBBtn onClick={handleAddressChange}>Адрес строительства</MDBBtn>
+                        <MDBBtn onClick={handleCopyInfo}>Скопировать информацию</MDBBtn>
+                        <MDBBtn onClick={handleDeleteClient}>Удалить</MDBBtn>
                     </div>
-                    <div className="status-dropdown">
-                        <button onClick={handleToggleStatusDropdown}>Изменить статус: {selectedStatus || 'Выберите статус'}</button>
-                        {showStatusDropdown &&
-                            <div>
-                                {statusOptions.map((option) => (
-                                    <button key={option} onClick={() => handleStatusChange(option)}>{option}</button>
-                                ))}
-                            </div>
-                        }
-                    </div>
+                )}
 
-                    <button onClick={handleAddressChange}>Адрес строительства</button>
-                    <button onClick={handleCopyInfo}>Скопировать информацию</button>
-                    <button onClick={handleDeleteClient}>Удалить</button>
-                </div>
             </div>
         </>
-    );
+    )
 };
 
 export default ClientCard;

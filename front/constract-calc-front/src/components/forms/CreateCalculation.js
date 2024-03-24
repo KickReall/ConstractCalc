@@ -8,10 +8,10 @@ import {
     MDBModalHeader, MDBModalTitle,
 } from "mdb-react-ui-kit";
 
-const CreateCalculation = ({style}) => {
+const CreateCalculation = ({ style, handleCreateCalculation }) => {
   return (
     <div>
-    <MDBBtn className={style}>Создать расчет</MDBBtn>
+    <MDBBtn className={style} onClick={handleCreateCalculation}>Создать расчет</MDBBtn>
     </div>
   );
 };
