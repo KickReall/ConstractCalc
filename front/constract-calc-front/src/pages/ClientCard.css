@@ -73,3 +73,51 @@ transform: scaleX(1);
 .nav-body{
     margin-left: 11px;
 }
+
+.client-bar {
+    margin-top: 150px;
+    margin-left: 20px;
+    position: fixed;
+}
+
+.client-bar button,
+.client-bar div {
+    display: inline-block; 
+}
+
+.client-bar button {
+    margin-right: 10px; 
+}
+
+.client-bar div {
+    margin-left: 20px; 
+}
+.status-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.status-dropdown > div {
+    
+    
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
+    z-index: 1;
+}
+
+.status-dropdown button {
+    
+    
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    cursor: pointer;
+}
+
+.status-dropdown button:hover {
+    
+}

@@ -11,13 +11,7 @@ class ClientService {
     }
 
     getById(id) {
-        const params = { id };
-
-        const config = {
-            params,
-        };
-
-        return axios.get(`${CLIENT_API_BASE_URL}/customers`, config);
+        return axios.get(`${CLIENT_API_BASE_URL}/customers/${id}`);
     }
 
 }

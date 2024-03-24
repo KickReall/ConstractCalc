@@ -16,11 +16,19 @@ const Home = () => {
             await ClientService.getAll()
                 .then((data) => {
                     setClients(data.data);
-                    console.log(data.data);
+                    //console.log(data.data);
                 });
         }
         getAllClients();
     }, []);
+
+    
+    /*const getById = async () => {
+        await ClientService.getById(1)
+            .then((data) => {
+                console.log(data.data);
+            });
+    }*/
 
     const onSaveClient = async (client) => {
         await ClientService.create(client)
@@ -33,6 +41,7 @@ const Home = () => {
     const selectClient = (clientId) => {
         setSelectedClientId(clientId);
         setVisible(true);
+        //getById();
     }
 
     return (

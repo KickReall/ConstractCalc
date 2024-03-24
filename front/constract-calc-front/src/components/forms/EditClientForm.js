@@ -10,7 +10,7 @@ import {
     MDBModalTitle
 } from "mdb-react-ui-kit";
 
-const EditClientForm = ({style, clientId}) => {
+const EditClientForm = ({ style, clientId }) => {
     const [basicModal, setBasicModal] = React.useState(false);
     const [lastname, setLastname] = React.useState('');
     const [firstname, setFirstname] = React.useState('');
@@ -21,12 +21,12 @@ const EditClientForm = ({style, clientId}) => {
     const [isEdit, setIsEdit] = React.useState(false);
 
     const toggleOpen = () => setBasicModal(!basicModal);
-   
+
     const [clients, setClients] = React.useState([]);
 
     React.useEffect(() => {
         const getAllClients = async () => {
-            await ClientService.getById().then((data) => {
+            await ClientService.getAll().then((data) => {
                 console.log(data.firstName);
                 setClients(data.data);
             });
@@ -63,29 +63,29 @@ const EditClientForm = ({style, clientId}) => {
                         </MDBModalHeader>
                         <MDBModalBody>
                             <MDBInput className='mb-4' type='text' id='lastname' label='Фамилия' value={getClientLastNameById(clientId)}
-                                      onChange={(e) => setLastname(e.target.value)}
-                                      disabled={isEdit ? false : true}
+                                onChange={(e) => setLastname(e.target.value)}
+                                disabled={isEdit ? false : true}
                             />
                             <MDBInput className='mb-4' type='text' id='firstname' label='Имя' value={getClientNameById(clientId)}
-                                      onChange={(e) => setFirstname(e.target.value)}
-                                      disabled={isEdit ? false : true}
+                                onChange={(e) => setFirstname(e.target.value)}
+                                disabled={isEdit ? false : true}
                             />
                             <MDBInput className='mb-4' type='text' id='patronymic' label='Отчество' value={getClientPatronymicById(clientId)}
-                                      onChange={(e) => setPatronymic(e.target.value)}
-                                      disabled={isEdit ? false : true}
+                                onChange={(e) => setPatronymic(e.target.value)}
+                                disabled={isEdit ? false : true}
                             />
                             <MDBInput className='mb-4' type='tel' id='telephone' label='Телефон'
-                                      placeholder={"8xxxxxxxxxx"} maxLength={11} value={telephone}
-                                      onChange={(e) => setTelephone(e.target.value)}
-                                      disabled={isEdit ? false : true}
+                                placeholder={"8xxxxxxxxxx"} maxLength={11} value={telephone}
+                                onChange={(e) => setTelephone(e.target.value)}
+                                disabled={isEdit ? false : true}
                             />
                             <MDBInput className='mb-4' type='email' id='email' label='E-mail' value={email}
-                                      onChange={(e) => setEmail(e.target.value)}
-                                      disabled={isEdit ? false : true}
+                                onChange={(e) => setEmail(e.target.value)}
+                                disabled={isEdit ? false : true}
                             />
                             <MDBInput className='mb-4' type='text' id='address' label='Адрес' value={address}
-                                      onChange={(e) => setAddress(e.target.value)}
-                                      disabled={isEdit ? false : true}
+                                onChange={(e) => setAddress(e.target.value)}
+                                disabled={isEdit ? false : true}
                             />
                         </MDBModalBody>
                         <MDBModalFooter className={'d-flex justify-content-between'}>
