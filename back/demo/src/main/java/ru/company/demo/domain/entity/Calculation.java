@@ -58,7 +58,7 @@ public class Calculation{
      * Список результатов расчета {@code Result}
      */
     @OneToMany(cascade = CascadeType.ALL)
-//    @JoinColumn(name="results_id")
+    @JoinColumn(name = "calculation_id")
     private List<Result> results;
 
     /**

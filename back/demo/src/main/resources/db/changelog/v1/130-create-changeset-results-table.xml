@@ -16,7 +16,8 @@
             <constraints
                     nullable="false"
                     foreignKeyName="results-calculation-id"
-                    references="calculation(id)"/>
+                    references="calculation(id)"
+                    deleteCascade="true"/>
         </column>
         <column name="material" type="varchar" remarks="Материал"/>
         <column name="amount" type="float" remarks="Количество"/>

@@ -9,6 +9,13 @@ import ru.company.demo.domain.repository.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
+import ru.company.demo.business.dto.incoming.StructuralElementFrameDto;
+import ru.company.demo.domain.entity.*;
+import ru.company.demo.domain.repository.*;
+
+import java.time.LocalDate;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -23,7 +30,8 @@ public class CalculationService {
     private final ResultRepository resultRepository;
 
     public Calculation getCalculationById(@PathVariable int id) {
-        return calculationRepository.findById(id).orElseThrow();
+        Optional<Calculation> byId = calculationRepository.findById(id);
+        return byId.orElseThrow();
     }
 
     public Calculation calculateFrame(StructuralElementFrameDto dto) {
